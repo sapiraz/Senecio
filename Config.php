@@ -8,7 +8,7 @@
 define("SYSTEM_VERSION","0.41");
 define("SYSTEM_NAME","Senecio");
 define("DEFAULT_SITE_NAME","Senecio");
-define("SITE_HOME","http://10.0.0.1/senecio/");
+define("SITE_HOME","/senecio/");
 define("SYS_FOLDER",__DIR__ . "/system/");
 define("PUBLIC_LANGUAGES_FOLDER","display/languages/");
 define("PUBLIC_TEMPLATES_FOLDER","display/templates/");
