@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <base href="<?php echo SITE_HOME; ?>" target="_self"/>
+    <style type="text/css" media="screen">@import url('<?php echo $stylesheet; ?>');</style>
+    <title><?php echo $title; ?></title>
+</head>
+<body>
+    <div class="header-wrapper">
+        <div id="logo"></div>
+        <?php echo $navbar; ?>
+    </div>
+    <div class="content-wrapper">
+        

@@ -1,0 +1,6 @@
+<html>
+<head>
+<title>CMS v.01</title>
+</head>
+<body>
+<?php echo $content ?>

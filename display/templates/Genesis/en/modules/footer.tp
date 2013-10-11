@@ -1,0 +1,11 @@
+</div>
+
+<div class="footer-wrapper">
+    <div class="footer">
+    Footer
+    <span class="copyright"><?php echo $copyright; render_time();?> </span>
+    </div>
+</div>
+
+</body>
+</html>

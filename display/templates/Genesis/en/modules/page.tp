@@ -1,0 +1,6 @@
+<div class='block-wrapper'>
+    <div class='block-inner'>
+        <div class='title'><span><?php echo $pageTitle; ?></span></div>
+        <div class='content'><?php echo $pageContent; ?></div>
+    </div>
+</div>

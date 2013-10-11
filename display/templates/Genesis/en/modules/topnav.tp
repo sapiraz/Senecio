@@ -1,0 +1,12 @@
+<ul class="navigation">
+    <?php
+     
+        if(is_array($buttons) && count($buttons) >= 1){
+            foreach($buttons as $button){
+                echo isset($button['href']) && $button['href'] != "" ? "<li><span><a href=\"{$button['href']}\">{$button['title']}</a></span></li>" : "<li><span>{$button['title']}</span></li>";
+            }
+            
+        }
+
+    ?>
+</ul>

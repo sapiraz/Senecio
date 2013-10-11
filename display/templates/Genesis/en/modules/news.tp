@@ -1,0 +1,21 @@
+<div class='block-wrapper'>
+    <div class='block-inner'>
+        <div class='title'><span><?php echo $pageTitle; ?></span></div>
+        <div class='content'>
+            
+            <?php
+            
+                if(isset($news) && is_array($news) && count($news) >= 1){
+                    echo "<ul class='list_basic'>";
+                    foreach($news as $entry){
+                        echo "<li><span class='label'>{$entry['title']}</span><span class='time'>{$entry['time']}</span></li>";
+                    }
+                    echo "</ul>";
+                    
+                }
+            
+            ?>
+            
+        </div>
+    </div>
+</div>

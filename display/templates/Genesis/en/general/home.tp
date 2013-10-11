@@ -1,0 +1,27 @@
+<?php
+if(count($leftContent) >= 1){
+    echo "<div class='left-wrapper'>";
+    foreach($leftContent as $child){
+        echo $child;
+    }
+    echo "</div>";
+}
+if(count($rightContent) >= 1){
+    echo "<div class='right-wrapper'>";
+    foreach($rightContent as $child){
+        echo $child;
+    }
+    echo "</div>";
+}
+if(count($centerContent) >= 1){
+    echo "<div class='center-wrapper'>";
+    foreach($centerContent as $child){
+        echo $child;
+    }
+    echo "</div>";
+}
+?>
+<div class="clear"></div>
+
+
+
