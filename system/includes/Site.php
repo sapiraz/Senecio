@@ -11,6 +11,7 @@
 		private $controller;
 		private $database;
                 private $language;
+                private $navigator;
 		public function __construct($lang = DEFAULT_LANGUAGE,$name = DEFAULT_SITE_NAME){
 			//Load default template (Defined in Config.php)
                         
@@ -18,6 +19,8 @@
                         $this->name = $name;
                         $this->database = new Database(DB_HOST,DB_USER,DB_PASSWORD,DB_NAME);
                         $this->loadTemplate(DEFAULT_TEMPLATE);
+                        $this->setNavigator(new Navigator());
+                        
                         
 		}
                 public function __destruct(){
@@ -57,7 +60,10 @@
 			}
 			
 		}
-		public function action($act){
+		public function action($act = NULL){
+                        if($act == NULL){
+                            $act = $this->getNavigator()->getAct();
+                        }
 			$ext = ".php";
 			require_once(CONTROLLER_FOLDER . $act . $ext);
 			$classname = "controller".preg_replace("/[^a-zA-Z]/","",$act);
@@ -65,6 +71,12 @@
 			
                         
 		}
+                public function getNavigator(){
+                    return $this->navigator;
+                }
+                public function setNavigator($navigator){
+                    $this->navigator = $navigator;
+                }
 
 		
 	}
